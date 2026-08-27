@@ -371,3 +371,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 @media (max-width: 760px) { .quiz-card { padding: 28px 25px; }.quiz-card-help { min-height: auto; }.quiz-result-details { display: grid; grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .quiz-card { padding: 24px 20px; }.quiz-card h2 { font-size: clamp(32px, 10vw, 45px); }.quiz-card-help { padding: 20px; }.quiz-card-help strong { font-size: 22px; } }
+
+/* Keep footer navigation clear when visitors reach the bottom of a page. */
+.whatsapp-float { transition: opacity .2s ease, transform .2s ease; }
+.whatsapp-float.is-hidden { opacity: 0; pointer-events: none; transform: translateY(18px); }
