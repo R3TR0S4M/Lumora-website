@@ -358,3 +358,16 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 @media (max-width: 760px) { .hero-campus-photo { top: auto; right: 24px; bottom: 82px; width: min(49vw, 255px); height: 255px; min-height: 0; transform: none; }.hero-campus-photo div { right: 14px; bottom: 14px; left: 14px; }.hero-campus-photo strong { font-size: 23px; }.hero-campus-photo span { font-size: 8px; }.home-place { grid-template-columns: 1fr; gap: 43px; padding: 76px 24px; }.home-place-images { min-height: 390px; }.home-place-city { width: 70%; height: 390px; }.home-place-heritage { width: 48%; height: 210px; } }
 @media (max-width: 640px) { .hero-campus-photo { right: 20px; bottom: 72px; width: 43vw; height: 225px; }.hero-campus-photo strong { font-size: 20px; }.home-place { padding-right: 20px; padding-left: 20px; }.home-place h2 { font-size: clamp(39px, 11.5vw, 52px); }.home-place-images { min-height: 335px; }.home-place-city { height: 335px; }.home-place-heritage { height: 172px; border-width: 6px; } }
+
+/* The course finder is a fuller conversation starter, not a final recommendation. */
+.quiz-card { max-width: 1040px; gap: 27px 32px; padding: 50px; }
+.quiz-card-help { display: grid; align-content: center; min-height: 142px; padding: 22px 24px; border-left: 3px solid #168bd4; color: #0a337a; background: #d9f1ff; }
+.quiz-card-help span { color: #2873bd; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+.quiz-card-help strong { display: block; margin: 11px 0 8px; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 500; line-height: 1.02; letter-spacing: -.04em; }
+.quiz-card-help p { margin: 0; color: #4d7098; font-size: 13px; line-height: 1.5; }
+.quiz-result-details { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.quiz-result-details span { padding: 8px 10px; color: #d8f0ff; border: 1px solid rgba(177, 223, 255, .38); font-family: 'DM Mono', monospace; font-size: 10px; line-height: 1.4; }
+.quiz-result .quiz-result-note { max-width: 610px; margin-bottom: 24px; color: #fff; font-size: 14px; }
+
+@media (max-width: 760px) { .quiz-card { padding: 28px 25px; }.quiz-card-help { min-height: auto; }.quiz-result-details { display: grid; grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .quiz-card { padding: 24px 20px; }.quiz-card h2 { font-size: clamp(32px, 10vw, 45px); }.quiz-card-help { padding: 20px; }.quiz-card-help strong { font-size: 22px; } }
