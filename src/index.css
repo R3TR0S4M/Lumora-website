@@ -262,6 +262,23 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 @media (max-width: 760px) { .free-applications-section { grid-template-columns: 1fr; gap: 40px; padding: 76px 24px; }.free-applications-image, .free-applications-points { grid-column: auto; grid-row: auto; }.free-applications-image { height: 370px; } }
 @media (max-width: 640px) { .free-applications-section { padding-right: 20px; padding-left: 20px; }.free-applications-section h2 { font-size: clamp(39px, 11.5vw, 52px); }.free-applications-image { height: 330px; }.free-applications-points article { grid-template-columns: 37px 1fr; gap: 10px; }.free-applications-points h3 { font-size: 27px; } }
 
+/* Visual course finder with larger guided selection controls. */
+.quiz-hero { display: grid; grid-template-columns: .85fr 1.15fr; gap: 8vw; align-items: center; max-width: 1120px; margin: 0 auto 68px; }
+.quiz-note { display: inline-block; max-width: 365px; margin-top: 25px; padding: 11px 13px; color: #0d4b9c; border-left: 3px solid #168bd4; background: #eaf7ff; font-family: 'DM Mono', monospace; font-size: 10px; line-height: 1.55; letter-spacing: .04em; text-transform: uppercase; }
+.quiz-gallery { position: relative; min-height: 400px; }
+.quiz-gallery img { position: absolute; display: block; object-fit: cover; box-shadow: 14px 17px 0 rgba(60, 151, 228, .17); }
+.quiz-image-main { top: 0; left: 0; width: 59%; height: 400px; object-position: 57% center; }
+.quiz-image-top { top: 0; right: 0; width: 37%; height: 185px; object-position: center; }
+.quiz-image-bottom { right: 0; bottom: 0; width: 37%; height: 195px; object-position: 54% center; }
+.quiz-card label { gap: 9px; }
+.quiz-card label > span { display: block; }
+.select-control { position: relative; display: flex; align-items: center; min-height: 58px; border: 1px solid #9bcbed; background: #fff; transition: border-color .2s ease, box-shadow .2s ease; }
+.select-control:focus-within { border-color: #168bd4; box-shadow: 0 0 0 3px rgba(22,139,212,.14); }
+.quiz-card .select-control select { width: 100%; min-height: 56px; padding: 0 43px 0 15px; appearance: none; border: 0; color: #0d4b9c; background: transparent; font-family: inherit; font-size: 15px; cursor: pointer; }
+.select-control i { position: absolute; right: 16px; color: #168bd4; font-size: 22px; font-style: normal; line-height: 1; pointer-events: none; }
+@media (max-width: 760px) { .quiz-hero { grid-template-columns: 1fr; gap: 43px; margin-bottom: 48px; }.quiz-gallery { min-height: 365px; }.quiz-image-main { height: 365px; }.quiz-image-top { height: 167px; }.quiz-image-bottom { height: 177px; } }
+@media (max-width: 640px) { .quiz-gallery { min-height: 315px; }.quiz-image-main { height: 315px; }.quiz-image-top { height: 144px; }.quiz-image-bottom { height: 153px; }.quiz-card .select-control select { min-height: 54px; font-size: 16px; } }
+
 /* Personal application preparation checklist. */
 .document-page { min-height: 100vh; padding: 155px clamp(24px, 9vw, 138px) 110px; background: #f7fbff; }
 .document-intro { max-width: 760px; }
