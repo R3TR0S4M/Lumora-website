@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import campusArrival from './assets/campus-arrival.jpg';
 import campusWalk from './assets/campus-walk.jpg';
 import studentFriends from './assets/student-friends.jpg';
-import lumoraLogo from './assets/lumora-consulting-logo.jpg';
+import lumoraLogo from './assets/lumora-consulting-logo-transparent.png';
 import advisorConsultation from './assets/advisor-consultation.jpg';
 import studentCelebration from './assets/student-celebration.jpg';
 import graduation from './assets/graduation.jpg';
