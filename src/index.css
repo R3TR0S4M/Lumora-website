@@ -248,17 +248,19 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 }
 
 /* No-fee application information on the application guide. */
-.free-applications-section { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; padding: 110px clamp(24px, 9vw, 138px); color: #fff; background: #0d4eb4; }
+.free-applications-section { display: grid; grid-template-columns: .72fr .48fr 1fr; gap: 4vw; align-items: center; padding: 110px clamp(24px, 9vw, 138px); color: #fff; background: #0d4eb4; }
 .free-applications-section h2 { margin: 16px 0 23px; color: #fff; font-size: clamp(45px, 4.7vw, 72px); font-weight: 500; line-height: .94; letter-spacing: -.06em; }
 .free-applications-section h2 em { color: #9dd9ff; }
 .free-applications-section > div > p { max-width: 415px; color: #cde8ff; line-height: 1.65; }
+.free-applications-image { width: 100%; height: 420px; object-fit: cover; object-position: 53% center; box-shadow: 14px 17px 0 rgba(141,213,255,.25); }
 .free-applications-points { border-top: 1px solid rgba(184,222,255,.4); }
 .free-applications-points article { display: grid; grid-template-columns: 54px 1fr; gap: 17px; padding: 24px 0; border-bottom: 1px solid rgba(184,222,255,.4); }
 .free-applications-points span { grid-row: 1 / span 2; color: #9dd9ff; font-family: 'DM Mono', monospace; font-size: 11px; }
 .free-applications-points h3 { grid-column: 2; margin: 0 0 8px; font-family: 'Playfair Display', serif; font-size: 29px; font-weight: 500; line-height: 1; letter-spacing: -.045em; }
 .free-applications-points p { grid-column: 2; margin: 0; color: #cde8ff; line-height: 1.55; }
-@media (max-width: 760px) { .free-applications-section { grid-template-columns: 1fr; gap: 40px; padding: 76px 24px; } }
-@media (max-width: 640px) { .free-applications-section { padding-right: 20px; padding-left: 20px; }.free-applications-section h2 { font-size: clamp(39px, 11.5vw, 52px); }.free-applications-points article { grid-template-columns: 37px 1fr; gap: 10px; }.free-applications-points h3 { font-size: 27px; } }
+@media (max-width: 980px) { .free-applications-section { grid-template-columns: .8fr 1.2fr; gap: 6vw; }.free-applications-image { grid-column: 1; grid-row: 2; height: 330px; }.free-applications-points { grid-column: 2; grid-row: 1 / span 2; } }
+@media (max-width: 760px) { .free-applications-section { grid-template-columns: 1fr; gap: 40px; padding: 76px 24px; }.free-applications-image, .free-applications-points { grid-column: auto; grid-row: auto; }.free-applications-image { height: 370px; } }
+@media (max-width: 640px) { .free-applications-section { padding-right: 20px; padding-left: 20px; }.free-applications-section h2 { font-size: clamp(39px, 11.5vw, 52px); }.free-applications-image { height: 330px; }.free-applications-points article { grid-template-columns: 37px 1fr; gap: 10px; }.free-applications-points h3 { font-size: 27px; } }
 
 /* Personal application preparation checklist. */
 .document-page { min-height: 100vh; padding: 155px clamp(24px, 9vw, 138px) 110px; background: #f7fbff; }
