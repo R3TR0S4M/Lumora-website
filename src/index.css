@@ -214,6 +214,6 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 }
 
 .contact-forms button:disabled { cursor: wait; opacity: .7; }
-.form-success, .form-error { margin: 14px 0 0; font-size: 13px; line-height: 1.45; }
-.form-success { color: #197146; }
-.form-error { color: #b42318; }
+.form-success, .form-error { margin: 16px 0 0; padding: 13px 15px; border-left: 4px solid; font-size: 14px; font-weight: 600; line-height: 1.45; }
+.form-success { color: #064e3b; border-color: #18a76d; background: #d8f7e8; }
+.form-error { color: #7a1a1a; border-color: #e45c5c; background: #ffe4e1; }
