@@ -188,9 +188,9 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .lumora-support > div > p { max-width: 380px; color: #cde8ff; line-height: 1.6; }
 .support-list { border-top: 1px solid rgba(184,222,255,.4); }
 .support-list article { display: grid; grid-template-columns: 55px 1fr; gap: 17px; padding: 27px 0; border-bottom: 1px solid rgba(184,222,255,.4); }
-.support-list span { color: #9dd9ff; font-family: 'DM Mono', monospace; font-size: 11px; }
-.support-list h3 { margin: 0 0 9px; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -.045em; }
-.support-list p { margin: 0; color: #cde8ff; line-height: 1.55; }
+.support-list span { grid-row: 1 / span 2; color: #9dd9ff; font-family: 'DM Mono', monospace; font-size: 11px; }
+.support-list h3 { grid-column: 2; margin: 0 0 9px; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -.045em; }
+.support-list p { grid-column: 2; margin: 0; color: #cde8ff; line-height: 1.55; }
 .about-family { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: center; padding: 110px clamp(24px, 9vw, 138px); background: #fff; }
 .about-family img { width: 100%; min-height: 430px; object-fit: cover; object-position: center; box-shadow: 16px 18px 0 rgba(60, 151, 228, .2); }
 .about-family > div > p { max-width: 480px; color: #567397; line-height: 1.65; }
