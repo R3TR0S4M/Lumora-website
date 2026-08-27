@@ -221,6 +221,32 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .free-application-note span { display: grid; width: 17px; height: 17px; place-items: center; color: #fff; border-radius: 50%; background: #0d4eb4; font-size: 11px; }
 @media (max-width: 640px) { .free-application-note { max-width: 300px; font-size: 9px; line-height: 1.35; } }
 
+/* Student-life image collage. */
+.student-life-section { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; align-items: center; padding: 120px clamp(24px, 9vw, 138px); background: #f7fbff; }
+.student-life-section h2 { margin: 17px 0 24px; color: #0a337a; font-size: clamp(45px, 4.7vw, 73px); font-weight: 500; line-height: .94; letter-spacing: -.065em; }
+.student-life-section h2 em { color: #168bd4; }
+.student-life-section > div > p { max-width: 390px; color: #567397; line-height: 1.65; }
+.student-life-gallery { position: relative; min-height: 535px; }
+.student-life-gallery img { position: absolute; display: block; object-fit: cover; box-shadow: 14px 17px 0 rgba(60, 151, 228, .18); }
+.student-life-gallery .life-main { top: 0; left: 0; width: 58%; height: 535px; object-position: 53% center; }
+.student-life-gallery .life-top { top: 0; right: 0; width: 38%; height: 245px; object-position: 42% center; }
+.student-life-gallery .life-bottom { right: 0; bottom: 0; width: 38%; height: 260px; object-position: 66% center; }
+@media (max-width: 760px) {
+  .student-life-section { grid-template-columns: 1fr; gap: 45px; padding: 76px 24px; }
+  .student-life-gallery { min-height: 420px; }
+  .student-life-gallery .life-main { height: 420px; }
+  .student-life-gallery .life-top { height: 192px; }
+  .student-life-gallery .life-bottom { height: 205px; }
+}
+@media (max-width: 640px) {
+  .student-life-section { padding-right: 20px; padding-left: 20px; }
+  .student-life-section h2 { font-size: clamp(39px, 11.5vw, 52px); }
+  .student-life-gallery { min-height: 350px; }
+  .student-life-gallery .life-main { width: 57%; height: 350px; }
+  .student-life-gallery .life-top { width: 39%; height: 158px; }
+  .student-life-gallery .life-bottom { width: 39%; height: 175px; }
+}
+
 /* Personal application preparation checklist. */
 .document-page { min-height: 100vh; padding: 155px clamp(24px, 9vw, 138px) 110px; background: #f7fbff; }
 .document-intro { max-width: 760px; }
