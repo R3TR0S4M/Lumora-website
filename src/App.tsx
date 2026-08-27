@@ -142,18 +142,21 @@ function Contact() {
   const [sending, setSending] = useState(false);
   const [enquiryError, setEnquiryError] = useState(false);
   const [booked, setBooked] = useState(false);
+  const [bookingSending, setBookingSending] = useState(false);
+  const [bookingError, setBookingError] = useState(false);
   const sendEnquiry = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
     setSending(true);
     setEnquiryError(false);
     try {
       const response = await fetch('https://formspree.io/f/mdeonvqd', {
         method: 'POST',
-        body: new FormData(event.currentTarget),
+        body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
       if (!response.ok) throw new Error('Enquiry could not be sent');
-      event.currentTarget.reset();
+      form.reset();
       setSent(true);
     } catch {
       setEnquiryError(true);
@@ -161,16 +164,27 @@ function Contact() {
       setSending(false);
     }
   };
-  const sendEmail = (event: React.FormEvent<HTMLFormElement>, subject: string, setStatus: (value: boolean) => void) => {
+  const sendConsultation = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const details = new FormData(event.currentTarget);
-    const lines: string[] = [];
-    details.forEach((value, key) => lines.push(`${key}: ${value}`));
-    const query = new URLSearchParams({ subject, body: `Hello Lumora,\n\n${lines.join('\n')}\n\nSent from the Lumora website.` });
-    window.location.href = `mailto:services.lumora@outlook.com?${query.toString()}`;
-    setStatus(true);
+    const form = event.currentTarget;
+    setBookingSending(true);
+    setBookingError(false);
+    try {
+      const response = await fetch('https://formspree.io/f/mzebplpo', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (!response.ok) throw new Error('Consultation request could not be sent');
+      form.reset();
+      setBooked(true);
+    } catch {
+      setBookingError(true);
+    } finally {
+      setBookingSending(false);
+    }
   };
-  return <main className="contact-page"><section><Eyebrow>Start a conversation</Eyebrow><h1>Let’s make<br />a plan <em>together.</em></h1><p>Whether you are a student, parent or guardian, we would love to hear from you.</p><div className="contact-note"><span>Good decisions start with<br />a simple hello.</span><i>✦</i></div><a className="whatsapp-link" href="https://wa.me/601139009572?text=Hello%20Lumora%2C%20I%20would%20like%20help%20studying%20in%20Malaysia." target="_blank" rel="noreferrer">Ask us on WhatsApp <span>↗</span></a></section><div className="contact-forms"><form onSubmit={sendEnquiry}><h3>Send an enquiry</h3><label>I am a<select name="I am a" required defaultValue=""><option value="" disabled>Select an option</option><option>Student</option><option>Parent or guardian</option></select></label><label>Full name<input name="Full name" required placeholder="Your name" /></label><label>Email address<input name="Email address" required type="email" placeholder="you@example.com" /></label><label>What can we help with?<textarea name="Enquiry" required placeholder="Tell us a little about your plans" /></label><button type="submit" disabled={sending}>{sent ? 'Enquiry sent successfully' : sending ? 'Sending enquiry...' : 'Send enquiry'} <Arrow /></button>{sent && <p className="form-success" role="status">Thank you. Lumora has received your enquiry and will be in touch.</p>}{enquiryError && <p className="form-error" role="alert">We could not send that just now. Please try again or use WhatsApp.</p>}</form><form className="booking-form" onSubmit={(event) => sendEmail(event, 'New Lumora consultation request', setBooked)}><h3>Book a free consultation</h3><label>Preferred date<input name="Preferred date" type="date" required /></label><label>Preferred time<select name="Preferred time" required defaultValue=""><option value="" disabled>Choose a time</option><option>10:00 AM</option><option>1:00 PM</option><option>4:00 PM</option></select></label><label>Your email<input name="Email address" required type="email" placeholder="you@example.com" /></label><button type="submit">{booked ? 'Email draft opened' : 'Request a consultation'} <Arrow /></button><small>Your email app will open with the request ready to send to Lumora.</small></form></div></main>;
+  return <main className="contact-page"><section><Eyebrow>Start a conversation</Eyebrow><h1>Let’s make<br />a plan <em>together.</em></h1><p>Whether you are a student, parent or guardian, we would love to hear from you.</p><div className="contact-note"><span>Good decisions start with<br />a simple hello.</span><i>✦</i></div><a className="whatsapp-link" href="https://wa.me/601139009572?text=Hello%20Lumora%2C%20I%20would%20like%20help%20studying%20in%20Malaysia." target="_blank" rel="noreferrer">Ask us on WhatsApp <span>↗</span></a></section><div className="contact-forms"><form onSubmit={sendEnquiry}><h3>Send an enquiry</h3><label>I am a<select name="I am a" required defaultValue=""><option value="" disabled>Select an option</option><option>Student</option><option>Parent or guardian</option></select></label><label>Full name<input name="Full name" required placeholder="Your name" /></label><label>Email address<input name="Email address" required type="email" placeholder="you@example.com" /></label><label>What can we help with?<textarea name="Enquiry" required placeholder="Tell us a little about your plans" /></label><button type="submit" disabled={sending}>{sent ? 'Enquiry sent successfully' : sending ? 'Sending enquiry...' : 'Send enquiry'} <Arrow /></button>{sent && <p className="form-success" role="status">Thank you. Lumora has received your enquiry and will be in touch.</p>}{enquiryError && <p className="form-error" role="alert">We could not send that just now. Please try again or use WhatsApp.</p>}</form><form className="booking-form" onSubmit={sendConsultation}><h3>Book a free consultation</h3><label>Preferred date<input name="Preferred date" type="date" required /></label><label>Preferred time<select name="Preferred time" required defaultValue=""><option value="" disabled>Choose a time</option><option>10:00 AM</option><option>1:00 PM</option><option>4:00 PM</option></select></label><label>Your email<input name="Email address" required type="email" placeholder="you@example.com" /></label><button type="submit" disabled={bookingSending}>{booked ? 'Request sent successfully' : bookingSending ? 'Sending request...' : 'Request a consultation'} <Arrow /></button>{booked && <p className="form-success" role="status">Thank you. Lumora has received your consultation request.</p>}{bookingError && <p className="form-error" role="alert">We could not send that just now. Please try again or use WhatsApp.</p>}</form></div></main>;
 }
 
 function PageHero({ label, title, text, action, onAction, aside, children }: { label: string; title: React.ReactNode; text: string; action: string; onAction: () => void; aside: React.ReactNode; children: React.ReactNode }) {
