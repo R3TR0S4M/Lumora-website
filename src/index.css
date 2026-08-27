@@ -217,3 +217,43 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .form-success, .form-error { margin: 16px 0 0; padding: 13px 15px; border-left: 4px solid; font-size: 14px; font-weight: 600; line-height: 1.45; }
 .form-success { color: #064e3b; border-color: #18a76d; background: #d8f7e8; }
 .form-error { color: #7a1a1a; border-color: #e45c5c; background: #ffe4e1; }
+
+/* Personal application preparation checklist. */
+.document-page { min-height: 100vh; padding: 155px clamp(24px, 9vw, 138px) 110px; background: #f7fbff; }
+.document-intro { max-width: 760px; }
+.document-intro h1 { margin: 18px 0 24px; color: #0a337a; font-size: clamp(52px, 6.2vw, 89px); font-weight: 500; line-height: .91; letter-spacing: -.07em; }
+.document-intro h1 em { color: #168bd4; }
+.document-intro > p { max-width: 620px; color: #567397; font-size: 17px; line-height: 1.6; }
+.check-progress { display: grid; grid-template-columns: auto minmax(150px, 300px) auto; gap: 17px; align-items: center; margin-top: 37px; color: #0a337a; }
+.check-progress > div:first-child { display: flex; align-items: baseline; gap: 7px; }
+.check-progress strong { font-family: 'Playfair Display', serif; font-size: 43px; font-weight: 500; line-height: 1; letter-spacing: -.05em; }
+.check-progress span, .check-progress small { color: #567397; font-size: 13px; }
+.progress-bar { height: 8px; overflow: hidden; background: #c8e4f8; }
+.progress-bar i { display: block; height: 100%; background: #168bd4; transition: width .35s ease; }
+.document-list { display: grid; max-width: 940px; margin: 62px auto; border-top: 1px solid #b5d3ef; }
+.document-list button { display: grid; grid-template-columns: 62px 1fr 38px; gap: 17px; align-items: center; min-height: 86px; padding: 19px 22px; color: #0a337a; border: 0; border-bottom: 1px solid #b5d3ef; background: #fff; font: inherit; text-align: left; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.document-list button:hover { background: #eaf7ff; }
+.document-list button span { color: #168bd4; font-family: 'DM Mono', monospace; font-size: 11px; }
+.document-list button strong { font-family: 'Playfair Display', serif; font-size: clamp(23px, 2.4vw, 32px); font-weight: 500; line-height: 1; letter-spacing: -.04em; }
+.document-list button i { display: grid; width: 29px; height: 29px; place-items: center; color: #fff; border: 1px solid #8fc3f3; border-radius: 50%; font-style: normal; }
+.document-list button.checked { color: #0c624d; background: #e2f8eb; }
+.document-list button.checked span { color: #0c8c60; }
+.document-list button.checked i { border-color: #0c8c60; background: #0c8c60; }
+.document-next { display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; max-width: 940px; margin: 0 auto; padding: 48px; color: #fff; background: #0d4eb4; }
+.document-next h2 { margin: 15px 0; color: #fff; font-size: clamp(36px, 4.2vw, 58px); font-weight: 500; line-height: .94; letter-spacing: -.06em; }
+.document-next h2 em { color: #9dd9ff; }
+.document-next p { max-width: 490px; margin: 0; color: #cde8ff; line-height: 1.55; }
+@media (max-width: 760px) {
+  .document-page { padding: 124px 24px 74px; }
+  .check-progress { grid-template-columns: 1fr auto; }
+  .check-progress .progress-bar { grid-column: 1 / -1; grid-row: 2; }
+  .document-list { margin: 46px 0; }
+  .document-next { align-items: flex-start; flex-direction: column; padding: 35px 26px; }
+}
+@media (max-width: 640px) {
+  .document-page { padding-right: 20px; padding-left: 20px; }
+  .document-intro h1 { font-size: clamp(44px, 13vw, 59px); }
+  .document-list button { grid-template-columns: 34px 1fr 30px; gap: 10px; min-height: 77px; padding: 17px 13px; }
+  .document-list button i { width: 25px; height: 25px; }
+  .document-next { padding: 31px 22px; }
+}
