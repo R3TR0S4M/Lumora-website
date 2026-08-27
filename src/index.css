@@ -217,6 +217,9 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .form-success, .form-error { margin: 16px 0 0; padding: 13px 15px; border-left: 4px solid; font-size: 14px; font-weight: 600; line-height: 1.45; }
 .form-success { color: #064e3b; border-color: #18a76d; background: #d8f7e8; }
 .form-error { color: #7a1a1a; border-color: #e45c5c; background: #ffe4e1; }
+.free-application-note { display: flex; align-items: center; gap: 9px; width: fit-content; margin: 18px 0 0; padding: 9px 12px; color: #0a4a84; border: 1px solid #a6d7f5; background: rgba(234,247,255,.86); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
+.free-application-note span { display: grid; width: 17px; height: 17px; place-items: center; color: #fff; border-radius: 50%; background: #0d4eb4; font-size: 11px; }
+@media (max-width: 640px) { .free-application-note { max-width: 300px; font-size: 9px; line-height: 1.35; } }
 
 /* Personal application preparation checklist. */
 .document-page { min-height: 100vh; padding: 155px clamp(24px, 9vw, 138px) 110px; background: #f7fbff; }
