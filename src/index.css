@@ -212,3 +212,8 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .support-list article { grid-template-columns: 37px 1fr; gap: 10px; }
   .support-list h3 { font-size: 27px; }
 }
+
+.contact-forms button:disabled { cursor: wait; opacity: .7; }
+.form-success, .form-error { margin: 14px 0 0; font-size: 13px; line-height: 1.45; }
+.form-success { color: #197146; }
+.form-error { color: #b42318; }
