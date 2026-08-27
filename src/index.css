@@ -21,3 +21,77 @@ footer { display: flex; justify-content: space-between; padding: 23px clamp(24px
 .brand { display: block; width: 200px; height: 80px; overflow: hidden; padding: 0; border: 0; background: transparent; }
 .brand img { display: block; width: 302px; max-width: none; height: auto; margin: -47px 0 0 -55px; mix-blend-mode: multiply; }
 @media (max-width: 760px) { .header { padding-top: 18px; padding-bottom: 18px; }.brand { width: 160px; height: 63px; }.brand img { width: 242px; margin: -38px 0 0 -44px; } }
+
+/* Final small-screen pass: optimise the experience for one-handed phone use. */
+@media (max-width: 640px) {
+  html, body { overflow-x: hidden; }
+  input, select, textarea { font-size: 16px; }
+
+  .header { min-height: 78px; padding: 10px 18px; }
+  .brand { width: 145px; height: 57px; }
+  .brand img { width: 220px; margin: -35px 0 0 -40px; }
+  .menu { width: 44px; height: 44px; padding: 10px; }
+  .mobile-nav { padding: 108px 24px 34px; }
+  .mobile-nav nav { gap: 9px; }
+  .mobile-nav nav button { min-height: 48px; font-size: clamp(28px, 9vw, 38px); }
+  .mobile-nav button:last-child { min-height: 52px; margin-top: 18px; }
+
+  .hero { min-height: 650px; height: auto; padding: 126px 20px 82px; }
+  .hero h1 { max-width: 340px; font-size: clamp(48px, 14vw, 64px); }
+  .hero-copy > p { max-width: 330px; font-size: 15px; line-height: 1.6; }
+  .hero-actions, .actions { align-items: stretch; width: min(100%, 330px); }
+  .hero-actions .cta, .actions .cta { justify-content: center; min-height: 52px; }
+  .orbit-stage { top: 57%; right: -52vw; width: 128vw; opacity: .48; }
+  .float-card.second { display: none; }
+  .float-card.first { left: 3%; bottom: 7%; }
+  .hero-foot { right: 20px; left: 20px; bottom: 18px; }
+
+  .stats { gap: 20px 0; padding: 32px 20px; }
+  .stats div { min-width: 0; padding-left: 11px; }
+  .stats strong { font-size: clamp(27px, 8vw, 38px); }
+
+  .malaysia-banner > div, .study-finder, .levels-section, .guide-section,
+  .split-intro, .content-band, .inner-hero, .finder, .qualification-section,
+  .apply-steps, .checklist, .whatsapp-apply, .journey-section, .image-story {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .malaysia-banner > div { padding-top: 58px; padding-bottom: 58px; }
+  .malaysia-banner img { min-height: 235px; }
+
+  h2, .study-finder h2, .levels-section h2, .guide-section h2, .finder h2,
+  .journey-section h2, .story-copy h2, .malaysia-banner h2 {
+    font-size: clamp(38px, 11.5vw, 52px);
+  }
+  .home-finder-card, .finder-card { padding: 20px; }
+  .home-finder-card select, .finder-card select { min-height: 48px; }
+  .home-finder-card button, .finder-card button, .whatsapp-apply form button,
+  .contact-forms form button { min-height: 52px; }
+  .level-grid button, .apply-grid article { min-height: 0; }
+  .level-grid button { padding: 25px 22px; }
+  .guide-list article { padding: 22px 0; }
+  .guide-list button { width: 40px; height: 40px; }
+
+  .inner-hero { min-height: 0; padding-top: 122px; padding-bottom: 64px; }
+  .inner-copy h1 { font-size: clamp(44px, 13vw, 60px); }
+  .inner-art { min-height: 235px; }
+  .photo-art { width: min(100%, 290px); height: 270px; }
+  .about-art { width: min(100%, 290px); height: 280px; }
+  .about-art img:last-child { width: 51%; }
+
+  .whatsapp-apply form, .contact-forms form { gap: 16px; }
+  .whatsapp-apply label, .contact-forms label { gap: 8px; }
+  .faq summary { min-height: 60px; padding: 18px 0; line-height: 1.35; }
+  .contact-page { padding: 120px 20px 64px; }
+  .contact-forms { gap: 36px; }
+
+  .whatsapp-float { right: 12px; bottom: 12px; min-height: 52px; padding: 0 16px; }
+  footer { align-items: flex-start; padding-right: 20px; padding-left: 20px; }
+  .footer-links { gap: 12px 16px; }
+}
+
+@media (max-width: 380px) {
+  .whatsapp-float span { display: none; }
+  .whatsapp-float { width: 54px; padding: 0; justify-content: center; border-radius: 50%; }
+  .hero h1 { font-size: 46px; }
+}
