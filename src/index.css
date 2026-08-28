@@ -402,3 +402,28 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 @media (max-width: 760px) { .study-costs, .intake-timeline { grid-template-columns: 1fr; gap: 42px; padding: 76px 24px; }.cost-grid { grid-template-columns: 1fr; }.cost-grid article { min-height: 0; }.cost-grid article:nth-child(even) { border-left: 0; }.cost-grid h3 { margin-top: 29px; }.intake-timeline { gap: 43px; }.timeline-list article { grid-template-columns: 42px 1fr; gap: 12px; }.contact-next { margin-top: 35px; } }
 @media (max-width: 640px) { .study-costs, .intake-timeline { padding-right: 20px; padding-left: 20px; }.study-costs h2, .intake-timeline h2 { font-size: clamp(39px, 11.5vw, 52px); }.cost-grid article { padding: 23px 0; }.timeline-list h3 { font-size: 25px; } }
+
+/* A light contact page keeps every form label and navigation item easy to read. */
+.contact-page { color: #0a337a; background: linear-gradient(135deg, #f7fbff 0%, #e5f5ff 100%); }
+.contact-page h1 { color: #082f72; }
+.contact-page h1 em { color: #168bd4; }
+.contact-page section > p:not(.eyebrow) { color: #45698f; }
+.contact-note { color: #0c579f; }
+.whatsapp-link { color: #087a4b; border-bottom-color: #55b88d; font-weight: 600; }
+.contact-next { border-top-color: #b5d3ef; }
+.contact-next > span { color: #3478bc; }
+.contact-next ol { color: #45698f; }
+.contact-forms { padding: 35px; border: 1px solid #b5d3ef; background: rgba(255, 255, 255, .9); box-shadow: 16px 18px 0 rgba(60, 151, 228, .13); }
+.contact-page form h3 { color: #0a337a; }
+.contact-page label { color: #386aa4; }
+.contact-page input, .contact-page select, .contact-page textarea { color: #0a337a; border-bottom-color: #8fc3f3; }
+.contact-page option { color: #0b438f; }
+.contact-page ::placeholder { color: #7094b8; }
+.contact-page form button { color: #fff; background: #0c4bb0; }
+.contact-page form button:hover { background: #083b8d; }
+.booking-form { border-color: #a8cde9; background: #eaf7ff; }
+.form-success { color: #064e3b; background: #d8f7e8; }
+.form-error { color: #7a1a1a; background: #ffe4e1; }
+
+@media (max-width: 760px) { .contact-forms { padding: 25px; box-shadow: 10px 12px 0 rgba(60, 151, 228, .12); } }
+@media (max-width: 640px) { .contact-forms { padding: 20px; } }
