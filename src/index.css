@@ -383,9 +383,54 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .home-place-images img { position: absolute; display: block; object-fit: cover; box-shadow: 15px 18px 0 rgba(54, 142, 215, .15); }
 .home-place-city { top: 0; right: 0; width: 67%; height: 480px; object-position: center; }
 .home-place-heritage { bottom: -18px; left: 0; width: 43%; height: 255px; border: 8px solid #f7fbff; object-position: 54% center; }
+.why-lumora { min-height: 0; background: #eaf7ff; }
+.why-lumora h2 em { color: #168bd4; }
+.landing-choices { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; align-items: start; padding: 110px clamp(24px, 9vw, 138px); background: #eaf7ff; }
+.landing-choices h2 { color: #0a337a; font-size: clamp(42px, 4.4vw, 70px); font-weight: 500; line-height: .96; letter-spacing: -.06em; }
+.landing-choices h2 em { color: #168bd4; }
+.landing-choice-grid { border-top: 1px solid #b5d3ef; }
+.landing-choice-grid button { display: grid; grid-template-columns: 50px 1fr 24px; gap: 14px; width: 100%; padding: 25px 0; border: 0; border-bottom: 1px solid #b5d3ef; color: #0a337a; background: transparent; text-align: left; }
+.landing-choice-grid button:hover strong { color: #168bd4; }
+.landing-choice-grid span { color: #4284d5; font-family: 'DM Mono', monospace; font-size: 10px; }
+.landing-choice-grid strong { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 500; line-height: 1; letter-spacing: -.05em; transition: color .2s; }
+.landing-choice-grid p { grid-column: 2; margin: -4px 0 0; color: #5a759c; font-size: 13px; line-height: 1.45; }
+.landing-choice-grid svg { grid-column: 3; grid-row: 1 / 3; align-self: center; width: 19px; color: #0c58bd; }
+.planning-guide-hero { display: grid; grid-template-columns: .95fr 1.05fr; gap: 8vw; align-items: center; min-height: 690px; padding: 165px clamp(24px, 9vw, 138px) 95px; background: #f7fbff; }
+.planning-guide-hero > div > p { max-width: 500px; margin: 27px 0; color: #527398; font-size: 17px; line-height: 1.6; }
+.planning-guide-hero img { width: 100%; height: 455px; object-fit: cover; box-shadow: 17px 19px 0 rgba(60, 151, 228, .18); }
+.planning-guide-points { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; padding: 112px clamp(24px, 9vw, 138px); background: #fff; }
+.planning-guide-points h2 { margin: 16px 0 22px; color: #0a337a; font-size: clamp(42px, 4.4vw, 70px); font-weight: 500; line-height: .96; letter-spacing: -.06em; }
+.planning-guide-points h2 em { color: #168bd4; }
+.planning-guide-points > div > p { max-width: 420px; color: #5a759c; line-height: 1.6; }
+.planning-guide-points > div:last-child { border-top: 1px solid #b5d3ef; }
+.planning-guide-points article { display: grid; grid-template-columns: 52px 1fr; gap: 14px; padding: 26px 0; border-bottom: 1px solid #b5d3ef; }
+.planning-guide-points article span { color: #4284d5; font-family: 'DM Mono', monospace; font-size: 10px; }
+.planning-guide-points article h3 { margin: 0 0 9px; color: #0a337a; font-family: 'Playfair Display', serif; font-size: 29px; font-weight: 500; line-height: 1; letter-spacing: -.05em; }
+.planning-guide-points article p { grid-column: 2; margin: 0; color: #5a759c; font-size: 14px; line-height: 1.5; }
+.planning-guide-cta { display: grid; grid-template-columns: 1fr .8fr; gap: 8vw; align-items: end; padding: 100px clamp(24px, 9vw, 138px); color: #fff; background: #0d4eb4; }
+.planning-guide-cta h2 { margin: 15px 0 19px; color: #fff; font-size: clamp(42px, 4.4vw, 70px); font-weight: 500; line-height: .96; letter-spacing: -.06em; }
+.planning-guide-cta h2 em { color: #9dd9ff; }
+.planning-guide-cta p { max-width: 420px; color: #cde8ff; line-height: 1.6; }
+.planning-guide-cta > div:last-child { display: grid; justify-items: start; gap: 18px; }
+.planning-guide-cta a { display: inline-flex; align-items: center; gap: 8px; color: #d6edff; text-decoration: none; border-bottom: 1px solid #91d2ff; padding-bottom: 5px; font-size: 14px; }
+.planning-guide-cta a svg { width: 17px; }
+.contact-confirmation { display: grid; place-items: center; min-height: 100vh; padding: 150px 24px 90px; color: #fff; background: radial-gradient(circle at 85% 20%, #2577d4 0, #0d4eb4 42%, #082f72 100%); }
+.contact-confirmation section { width: min(100%, 760px); }
+.contact-confirmation h1 { color: #fff; }
+.contact-confirmation h1 em { color: #9dd9ff; }
+.contact-confirmation section > p { max-width: 550px; margin: 28px 0 35px; color: #d3ebff; font-size: 17px; line-height: 1.6; }
+.confirmation-steps { max-width: 600px; padding: 24px 0; border-top: 1px solid rgba(184, 222, 255, .45); border-bottom: 1px solid rgba(184, 222, 255, .45); }
+.confirmation-steps > span { color: #9dd9ff; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+.confirmation-steps ol { display: grid; gap: 9px; margin: 15px 0 0; padding-left: 20px; color: #fff; line-height: 1.5; }
+.confirmation-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+.confirmation-actions a, .confirmation-actions button { display: inline-flex; align-items: center; gap: 10px; padding: 15px 18px; border: 0; color: #0b5d3c; background: #fff; text-decoration: none; font: inherit; font-size: 14px; font-weight: 600; }
+.confirmation-actions button { color: #d6edff; background: transparent; border-bottom: 1px solid #91d2ff; padding-right: 0; padding-left: 0; }
 
 @media (max-width: 760px) { .hero-campus-photo { top: auto; right: 24px; bottom: 82px; width: min(49vw, 255px); height: 255px; min-height: 0; transform: none; }.hero-campus-photo div { right: 14px; bottom: 14px; left: 14px; }.hero-campus-photo strong { font-size: 23px; }.hero-campus-photo span { font-size: 8px; }.home-place { grid-template-columns: 1fr; gap: 43px; padding: 76px 24px; }.home-place-images { min-height: 390px; }.home-place-city { width: 70%; height: 390px; }.home-place-heritage { width: 48%; height: 210px; } }
 @media (max-width: 640px) { .hero-campus-photo { right: 20px; bottom: 72px; width: 43vw; height: 225px; }.hero-campus-photo strong { font-size: 20px; }.home-place { padding-right: 20px; padding-left: 20px; }.home-place h2 { font-size: clamp(39px, 11.5vw, 52px); }.home-place-images { min-height: 335px; }.home-place-city { height: 335px; }.home-place-heritage { height: 172px; border-width: 6px; } }
+
+@media (max-width: 760px) { .landing-choices, .planning-guide-hero, .planning-guide-points, .planning-guide-cta { grid-template-columns: 1fr; gap: 43px; padding: 76px 24px; }.landing-choice-grid strong { font-size: 26px; }.planning-guide-hero { min-height: 0; padding-top: 140px; }.planning-guide-hero img { height: 340px; }.planning-guide-points article { grid-template-columns: 38px 1fr; gap: 10px; }.planning-guide-points article h3 { font-size: 27px; }.planning-guide-cta { align-items: start; }.contact-confirmation { padding: 140px 24px 75px; }.confirmation-actions { display: grid; justify-items: start; } }
+@media (max-width: 640px) { .landing-choices, .planning-guide-hero, .planning-guide-points, .planning-guide-cta { padding-right: 20px; padding-left: 20px; }.landing-choices h2, .planning-guide-points h2, .planning-guide-cta h2 { font-size: clamp(39px, 11.5vw, 52px); }.planning-guide-hero img { height: 295px; }.contact-confirmation { padding-right: 20px; padding-left: 20px; } }
 
 /* The course finder is a fuller conversation starter, not a final recommendation. */
 .quiz-card { max-width: 1040px; gap: 27px 32px; padding: 50px; }
