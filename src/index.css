@@ -214,17 +214,26 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .about-family img { width: 100%; min-height: 430px; object-fit: cover; object-position: center; box-shadow: 16px 18px 0 rgba(60, 151, 228, .2); }
 .about-family > div > p { max-width: 480px; color: #567397; line-height: 1.65; }
 .about-family .cta { margin-top: 15px; }
+.about-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: center; padding: 110px clamp(24px, 9vw, 138px); color: #fff; background: #0d4eb4; }
+.about-contact img { width: 100%; min-height: 430px; object-fit: cover; object-position: center; box-shadow: 16px 18px 0 rgba(151, 217, 255, .25); }
+.about-contact h2 { margin: 18px 0 25px; color: #fff; font-size: clamp(45px, 4.7vw, 73px); font-weight: 500; line-height: .94; letter-spacing: -.065em; }
+.about-contact h2 em { color: #9dd9ff; }
+.about-contact > div > p { max-width: 490px; color: #cde8ff; line-height: 1.65; }
+.about-contact-links { display: grid; gap: 14px; margin-top: 32px; }
+.about-contact-links a { display: grid; gap: 5px; width: fit-content; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; border-bottom: 1px solid #91d2ff; padding-bottom: 9px; }
+.about-contact-links a span { color: #9dd9ff; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 760px) {
-  .about-story-section, .lumora-support, .about-family { grid-template-columns: 1fr; gap: 46px; padding: 76px 24px; }
+  .about-story-section, .lumora-support, .about-family, .about-contact { grid-template-columns: 1fr; gap: 46px; padding: 76px 24px; }
   .about-story-image { min-height: 365px; }
   .about-story-image img { height: 365px; }
   .about-family img { min-height: 310px; }
+  .about-contact img { min-height: 310px; }
   .lumora-support { gap: 38px; }
 }
 @media (max-width: 640px) {
   .section-intro { margin: 19px 0 36px; font-size: 16px; }
-  .about-story-section, .lumora-support, .about-family { padding-right: 20px; padding-left: 20px; }
-  .about-story-copy h2, .about-family h2, .lumora-support h2 { font-size: clamp(39px, 11.5vw, 52px); }
+  .about-story-section, .lumora-support, .about-family, .about-contact { padding-right: 20px; padding-left: 20px; }
+  .about-story-copy h2, .about-family h2, .lumora-support h2, .about-contact h2 { font-size: clamp(39px, 11.5vw, 52px); }
   .about-story-image { min-height: 310px; }
   .about-story-image img { height: 310px; }
   .about-story-image span { right: 0; bottom: -16px; padding: 16px 18px; font-size: 23px; }
