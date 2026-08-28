@@ -508,3 +508,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 @media (max-width: 760px) { .contact-forms { padding: 25px; box-shadow: 10px 12px 0 rgba(60, 151, 228, .12); } }
 @media (max-width: 640px) { .contact-forms { padding: 20px; } }
+
+/* Keep the Malaysia highlight readable while framing the Kuala Lumpur skyline. */
+.malaysia-banner img { object-position: 50% 48%; }
+.malaysia-banner .malaysia-banner-note { margin-top: 14px; color: #bfe3ff; font-size: 12px; line-height: 1.55; }
