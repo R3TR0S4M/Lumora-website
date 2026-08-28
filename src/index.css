@@ -157,6 +157,11 @@ footer { display: flex; justify-content: space-between; padding: 23px clamp(24px
 .progress-note { grid-column: 2; padding: 25px 30px; color: #1b579a; border-left: 3px solid #168bd4; background: #eaf7ff; }
 .progress-note strong { font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 500; }
 .progress-note p { max-width: 550px; margin: 8px 0 0; line-height: 1.5; }
+.progress-arrival { grid-column: 2; display: grid; grid-template-columns: 1fr .8fr; align-items: stretch; overflow: hidden; border: 1px solid #b5d3ef; background: #fff; }
+.progress-arrival img { width: 100%; min-height: 220px; height: 100%; object-fit: cover; object-position: center; }
+.progress-arrival div { display: flex; flex-direction: column; justify-content: center; padding: 28px; }
+.progress-arrival span { color: #4284d5; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+.progress-arrival p { margin: 15px 0 0; color: #0a337a; font-family: 'Playfair Display', serif; font-size: 27px; font-weight: 500; line-height: 1.02; letter-spacing: -.05em; }
 
 button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #168bd4; outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
@@ -176,6 +181,8 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .progress-intro { position: static; }
   .progress-track { margin-top: 48px; }
   .progress-note { margin-top: 20px; }
+  .progress-arrival { grid-template-columns: 1fr; margin-top: 20px; }
+  .progress-arrival img { min-height: 260px; }
 }
 @media (max-width: 640px) {
   .quiz-page, .resources-page, .progress-page { padding-right: 20px; padding-left: 20px; }
@@ -189,6 +196,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .progress-track i { display: none; }
   .progress-track h2 { font-size: 28px; }
   .progress-note { padding: 22px; }
+  .progress-arrival div { padding: 23px; }
 }
 
 /* Expanded About page. */
